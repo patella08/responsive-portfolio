@@ -241,6 +241,29 @@ input[type=submit] {
   border: 0 none;
 }
 
+
+/*
+ * Sticky footer
+ */
+#wrapper {
+  min-height: 100vh;
+  margin-bottom: -100px;
+}
+
+#wrapper::after {
+  content: "";
+  display: block;
+}
+
+footer, #wrapper::after {
+  height: 100px;
+}
+
+footer {
+  background: #444;
+}
+
+
 @media screen and (max-width: 980px) {
 	.sidebar, .main-section {
 		float: none;
@@ -254,14 +277,6 @@ input[type=submit] {
 	}
 	#main-container {
 		padding-top: 20px;
-	}
-	footer {
-		position: absolute;
-		 right: 0;
-		 left: 0;
-		 padding: 1rem;
-     height: 100px;
-		
 	}
 
 }
@@ -278,16 +293,6 @@ input[type=submit] {
 	}
 	#main-container {
 		padding-top: 20px;
-	}
-
-	footer {
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		padding: 1rem;
-    height: 100px;
-
 	}
 
 }
@@ -317,7 +322,5 @@ input[type=submit] {
 		padding: 1rem;
 		height: 100px;
 	}
-	/*For some reason I cannot get the footer to stay at the bottom for 
-	this screen size*/
 
 }
